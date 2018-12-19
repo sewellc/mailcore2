@@ -66,10 +66,10 @@ build_git_ios()
   echo building $name $version - $rev
 
   BITCODE_FLAGS="-fembed-bitcode"
-  if test "x$NOBITCODE" != x ; then
+  #if test "x$NOBITCODE" != x ; then
      BITCODE_FLAGS=""
      XCODE_BITCODE_FLAGS="ENABLE_BITCODE=NO"
-  fi
+  #fi
   XCTOOL_OTHERFLAGS='$(inherited)'
   XCTOOL_OTHERFLAGS="$XCTOOL_OTHERFLAGS $BITCODE_FLAGS"
   cd "$srcdir/$name/build-mac"
